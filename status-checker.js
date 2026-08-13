@@ -30,7 +30,7 @@ function checkRow(board, player, rowNumber) {
     Otherwise, return false
 */
 function checkColumn(board, player, columnNumber) {
-    return (board[0][columnNumber]==player && board[0][columnNumber]==baord[1][columnNumber] && board[1][columnNumber]==board[2][columnNumber]);
+    return (board[0][columnNumber]==player && board[0][columnNumber]==board[1][columnNumber] && board[1][columnNumber]==board[2][columnNumber]);
 }
 
 /*
