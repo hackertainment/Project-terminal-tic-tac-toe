@@ -17,11 +17,11 @@
 */
 export function printBoard(board) {
     if (board.length==3 && board[0].length==3 && board[1].length==3 && board[2].length==3) {
-       console.log(board[0].join("|"));
+       console.log(board[0].join("|").replaceAll("_", " "));
        console.log("-+-+-");
-       console.log(board[1].join("|"));
+       console.log(board[1].join("|").replaceAll("_", " "));
        console.log("-+-+-");
-       console.log(board[2].join("|"));
+       console.log(board[2].join("|").replaceAll("_", " "));
     }
 }
 
@@ -33,7 +33,7 @@ export function printBoard(board) {
 export function checkIfNoMovesLeft(board) {
     for (let row of board) {
         for (let col of row) {
-            if (col==" ") {
+            if (col=="_") {
                 return false;
             }
         }
