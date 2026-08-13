@@ -16,7 +16,7 @@
     Test your function by calling it with an example tic-tac-toe board.
 */
 export function printBoard(board) {
-    if (board.length==3) {
+    if (board.length==3 && board[0].length==3 && board[1].length==3 && board[2].length==3) {
        console.log(board[0].join("|"));
        console.log("-+-+-");
        console.log(board[1].join("|"));
