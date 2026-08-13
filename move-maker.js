@@ -19,7 +19,7 @@ function validateMove(move, board) {
     // Implement this at the end if you have time, otherwise you can help your teammates!
     if (move.length==3 && move[0]>="1" && move[0]<="3" && move[1]=="," && move[2]>="1" && move[2]<="3") {
         let [row, col] = move.split(",").map(pos => Number(pos)-1);
-        if (board[row][col]==" ") {
+        if (board[row][col]=="_") {
             return true;
         }
     }
