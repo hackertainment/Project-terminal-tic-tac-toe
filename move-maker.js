@@ -17,7 +17,14 @@
 */
 function validateMove(move, board) {
     // Implement this at the end if you have time, otherwise you can help your teammates!
-    return true;
+    if (move.length==3 && move[0]>="1" && move[0]<="3" && move[1]=="," && move[2]>="1" && move[2]<="3") {
+        let [row, col] = move.split(",").map(pos => Number(pos)-1);
+        if (board[row][col]=="_") {
+            return true;
+        }
+    }
+    console.log("Try again...");
+    return false;
 }
 
 /*
@@ -32,5 +39,12 @@ function validateMove(move, board) {
             - Return true
 */
 export function makeMove(board, move, player) {
+    if (board.length==3 && board[0].length==3 && board[1].length==3 && board[2].length==3) {
+        if (validateMove(move, board)) {
+            let [row, col] = move.split(",").map(pos => Number(pos)-1);
+            board[row][col] = player;
+            return true;
+        }
+    }
     return false;
 }
